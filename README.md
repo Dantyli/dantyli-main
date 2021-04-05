@@ -1,2 +1,2 @@
 # dantyli-main
-静态文件
+dantyli.com 主站自动化构建

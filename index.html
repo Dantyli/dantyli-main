@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello World!</title>
+    <link rel="icon" href="./img/Icon.jpeg">
+</head>
+<style>
+   body,html,#root{
+       height: 100%;
+       width: 100%;
+       padding: 0;
+       margin: 0;
+   }
+   #root{
+       background: url('./img/DanBg.jpg') no-repeat;
+       background-size: cover;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+   }
+   .home{
+       max-width: 1200px;
+       min-width: 700px;
+       display: flex;
+       justify-content: space-between;
+   }
+   .home a{
+    display: block;
+    background:#0d99e3;
+    color: #fff;
+    height: 50px;
+    border-radius: 8px;
+    width: 170px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    line-height: 50px;
+    text-decoration: none;
+   }
+   a:hover{
+     opacity: 0.7;
+   }
+  .slogon{
+       width: 500px;
+   }
+
+</style>
+<body>
+    <div id="root">
+        <p><img class="slogon" src="./img/slogon.png"  alt=""></p>
+       <div class="home">
+          <a  href="mailto:leece2012@163.com">联系作者</a>
+          <a onclick="alert('笔记系统即将上线')" href="javascript:">踩坑笔记</a>
+          <a href="https://github.com/dantyli" target="_blank">开源项目</a>
+          <a onclick="alert('托管服务正在加速开发中，LOL')" href="javascript:">托管服务</a>
+       </div>
+    </div>
+</body>
+</html>

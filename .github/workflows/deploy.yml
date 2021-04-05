@@ -1,0 +1,20 @@
+name: deploy dantyli-main
+on: 
+  push: 
+    branches: 
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: deploy
+        uses: easingthemes/ssh-deploy
+        env: 
+           SSH_PRIVATE_KEY: ${{ secrets.TOKEN }}
+           ARGS: "-avz --delete"
+           SOURCE: "dist/"
+           REMOTE_HOST: ${{ secrets.IP }}
+           REMOTE_USER: ${{ secrets.USER }}
+           TARGET: ${{ secrets.TARGET }}
