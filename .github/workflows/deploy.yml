@@ -10,11 +10,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: deploy
-        uses: easingthemes/ssh-deploy@v2.0.7
-        env: 
-           SSH_PRIVATE_KEY: ${{ secrets.TOKEN }}
-           ARGS: "-avz --delete"
-           SOURCE: "dist/"
-           REMOTE_HOST: ${{ secrets.IP }}
-           REMOTE_USER: ${{ secrets.USER }}
-           TARGET: ${{ secrets.TARGET }}
+        uses: garygrossgarten/github-action-scp@release
+        with: 
+           rmRemote: true
+           local: "dist/"
+           password: ${{secrets.TOKEN}}
+           host: ${{ secrets.IP }}
+           username: ${{ secrets.USER }}
+           remote: ${{ secrets.TARGET }}
